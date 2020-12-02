@@ -1,3 +1,3 @@
 export const serviceConfig = {
-    baseURL: "http://localhost:64532",
+    baseURL: "http://localhost:44363",
 };

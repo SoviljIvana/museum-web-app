@@ -130,9 +130,15 @@ getUser(username){
 
     handleSubmit(e) {
         e.preventDefault();
-        this.setState({ submitted: true });
-        this.getUser(this.state.username);
+        const { username } = this.state;
+        if (username) {
+            this.login();
+        } else {
+            this.setState({ submitted: false });
+        }
     }
+
+
 
     guestToken() {
         const requestOptions = {
@@ -160,36 +166,60 @@ getUser(username){
                 this.setState({ submitted: false });
             });
     }
-
-    adminLogin() {
+    login() {
         const { username } = this.state;
-
+    
         const requestOptions = {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': 'Bearer ' + localStorage.getItem('jwt')
-            }
+            method: 'GET'
         };
-
+    
         fetch(`${serviceConfig.baseURL}/get-token?name=${username}&admin=true`, requestOptions)
             .then(response => {
-                if (!response.ok) {
-                    return Promise.reject(response);
-                }
-                return response.json();
+              if (!response.ok) {
+                return Promise.reject(response);
+            }
+            return response.json();
             })
             .then(data => {
-                NotificationManager.success('Ulogovani ste kao admin!');
-                if (data.token) {
-                    localStorage.setItem("jwt", data.token);
+              NotificationManager.success('Successfuly signed in!');
+              if (data.token) {
+                localStorage.setItem("jwt", data.token);
                 }
             })
             .catch(response => {
-                NotificationManager.error("Neuspešno prijavljivanje. ");
+                NotificationManager.error(response.message || response.statusText);
                 this.setState({ submitted: false });
             });
     }
+    // adminLogin() {
+    //     const { username } = this.state;
+
+    //     const requestOptions = {
+    //         method: 'GET',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //             'Authorization': 'Bearer ' + localStorage.getItem('jwt')
+    //         }
+    //     };
+
+    //     fetch(`${serviceConfig.baseURL}/get-token?name=${username}&admin=true`, requestOptions)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 return Promise.reject(response);
+    //             }
+    //             return response.json();
+    //         })
+    //         .then(data => {
+    //             NotificationManager.success('Ulogovani ste kao admin!');
+    //             if (data.token) {
+    //                 localStorage.setItem("jwt", data.token);
+    //             }
+    //         })
+    //         .catch(response => {
+    //             NotificationManager.error("Neuspešno prijavljivanje. ");
+    //             this.setState({ submitted: false });
+    //         });
+    // }
     openModal() {
         this.setState({ open: true });
     }
@@ -350,6 +380,7 @@ getUser(username){
                                 </Button> */}
                                 {/* </Form> */}
                             {/* </Popup> */} 
+
                             <Form inline onSubmit={this.handleSubmit}>
                                 <FormControl
                                     type="text"

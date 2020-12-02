@@ -23,7 +23,6 @@ class ShowAllExhibitionsForUser extends Component{
     }
 
     getExhibitions(){
-        
         const requestOptions = {
             method: 'GET' ,
             headers: {
@@ -40,7 +39,9 @@ class ShowAllExhibitionsForUser extends Component{
               return response.json();
               })
               .then(data => {
+              
                 if (data) {
+                    
                   this.setState({ 
                     exhibitions: data,
                        isLoading: false });
@@ -51,6 +52,8 @@ class ShowAllExhibitionsForUser extends Component{
                   this.setState({ isLoading: false });
               });
         }   
+
+
         getAllExhibitions() {
 
             return this.state.exhibitions.map(exhibition => {
@@ -94,6 +97,7 @@ class ShowAllExhibitionsForUser extends Component{
             const exhibitionDetails = this.getAllExhibitions();
             const exhibitions = isLoading ? <Spinner></Spinner> :<Container className= "container-cards"> {exhibitionDetails} </Container>;
             return (
+              
                         <CardColumns>
                         {exhibitions}
                         </CardColumns>   
