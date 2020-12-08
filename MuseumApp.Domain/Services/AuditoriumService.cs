@@ -30,7 +30,7 @@ namespace MuseumApp.Domain.Services
             AuditoriumEntity newAuditorium = new AuditoriumEntity
             {
                 AuditoriumId = createAuditorium.AuditoriumId,
-                NameOfAuditorium = createAuditorium.NameOfAuditorium,
+                AuditoriumName = createAuditorium.NameOfAuditorium,
                 MuseumId = createAuditorium.MuseumId,
                 NumberOfSeats = createAuditorium.NumberOfSeats
             };
@@ -72,7 +72,7 @@ namespace MuseumApp.Domain.Services
                 Auditorium = new AuditoriumDomainModel
                 {
                     AuditoriumId = auditorium.AuditoriumId,
-                    NameOfAuditorium = auditorium.NameOfAuditorium,
+                    NameOfAuditorium = auditorium.AuditoriumName,
                     MuseumId = auditorium.MuseumId,
                     NumberOfSeats = auditorium.NumberOfSeats
                 }
@@ -97,7 +97,7 @@ namespace MuseumApp.Domain.Services
                 model = new AuditoriumDomainModel
                 {
                     AuditoriumId = item.AuditoriumId,
-                    NameOfAuditorium = item.NameOfAuditorium,
+                    NameOfAuditorium = item.AuditoriumName,
                     NumberOfSeats = item.NumberOfSeats,
                     MuseumId = item.MuseumId
                 };
@@ -116,7 +116,7 @@ namespace MuseumApp.Domain.Services
             result = new AuditoriumDomainModel
             {
                 AuditoriumId = data.AuditoriumId,
-                NameOfAuditorium = data.NameOfAuditorium,
+                NameOfAuditorium = data.AuditoriumName,
                 NumberOfSeats = data.NumberOfSeats,
                 MuseumId = data.MuseumId
             };
@@ -165,7 +165,7 @@ namespace MuseumApp.Domain.Services
                 Auditorium = new AuditoriumDomainModel
                 {
                     AuditoriumId = deletedAuditorium.AuditoriumId,
-                    NameOfAuditorium = deletedAuditorium.NameOfAuditorium,
+                    NameOfAuditorium = deletedAuditorium.AuditoriumName,
                     MuseumId = deletedAuditorium.MuseumId,
                     NumberOfSeats = deletedAuditorium.NumberOfSeats
                 },
@@ -205,7 +205,7 @@ namespace MuseumApp.Domain.Services
             {
                 AuditoriumId = updateAuditorium.AuditoriumId,
                 MuseumId = updateAuditorium.MuseumId,
-                NameOfAuditorium = updateAuditorium.NameOfAuditorium,
+                AuditoriumName = updateAuditorium.NameOfAuditorium,
                 NumberOfSeats = updateAuditorium.NumberOfSeats
             };
 
@@ -233,7 +233,7 @@ namespace MuseumApp.Domain.Services
                 {
                     MuseumId = auditoriumUpdate.MuseumId,
                     AuditoriumId = auditoriumUpdate.AuditoriumId,
-                    NameOfAuditorium = auditoriumUpdate.NameOfAuditorium,
+                    NameOfAuditorium = auditoriumUpdate.AuditoriumName,
                     NumberOfSeats = auditoriumUpdate.NumberOfSeats
                 }
             };

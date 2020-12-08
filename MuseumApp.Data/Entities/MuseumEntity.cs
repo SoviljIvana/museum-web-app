@@ -13,7 +13,7 @@ namespace MuseumApp.Data
     {
         [Key]
         public int MuseumId { get; set; }
-        public string Name { get; set; }
+        public string MuseumName { get; set; }
         public string StreetAndNumber { get; set; }
         public string City { get; set; }
         public string Email { get; set; }

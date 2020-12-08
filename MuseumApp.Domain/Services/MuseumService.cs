@@ -33,7 +33,7 @@ namespace MuseumApp.Domain.Services
                 StreetAndNumber = museumModel.StreetAndNumber,
                 City = museumModel.City,
                 Email = museumModel.Email,
-                Name = museumModel.Name,
+                MuseumName = museumModel.Name,
                 PhoneNumber = museumModel.PhoneNumber
             };
 
@@ -59,7 +59,7 @@ namespace MuseumApp.Domain.Services
                     StreetAndNumber = museum.StreetAndNumber,
                     City = museum.City,
                     Email = museum.Email,
-                    Name = museum.Name,
+                    Name = museum.MuseumName,
                     PhoneNumber = museum.PhoneNumber
                 }
             };
@@ -127,7 +127,7 @@ namespace MuseumApp.Domain.Services
                     StreetAndNumber = deletedMuseum.StreetAndNumber,
                     City = deletedMuseum.City,
                     Email = deletedMuseum.Email,
-                    Name = deletedMuseum.Name,
+                    Name = deletedMuseum.MuseumName,
                     PhoneNumber = deletedMuseum.PhoneNumber
                 },
                 IsSuccessful = true,
@@ -152,7 +152,7 @@ namespace MuseumApp.Domain.Services
                 model = new MuseumDomainModel
                 {
                     MuseumId = item.MuseumId,
-                    Name = item.Name,
+                    Name = item.MuseumName,
                     StreetAndNumber = item.StreetAndNumber,
                     City = item.City,
                     Email = item.Email,
@@ -173,7 +173,7 @@ namespace MuseumApp.Domain.Services
             result = new MuseumDomainModel
             {
                 MuseumId = data.MuseumId,
-                Name = data.Name,
+                Name = data.MuseumName,
                 StreetAndNumber = data.StreetAndNumber,
                 City = data.City,
                 Email = data.Email,
@@ -192,7 +192,7 @@ namespace MuseumApp.Domain.Services
                 StreetAndNumber = update.StreetAndNumber,
                 City = update.City,
                 Email = update.Email,
-                Name = update.Name,
+                MuseumName = update.Name,
                 PhoneNumber = update.PhoneNumber
             };
 
@@ -222,7 +222,7 @@ namespace MuseumApp.Domain.Services
                     StreetAndNumber = updateMuseum.StreetAndNumber,
                     City = updateMuseum.City,
                     Email = updateMuseum.Email,
-                    Name = updateMuseum.Name,
+                    Name = updateMuseum.MuseumName,
                     PhoneNumber = updateMuseum.PhoneNumber
                 }
             };

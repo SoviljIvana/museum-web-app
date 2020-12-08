@@ -93,7 +93,7 @@ namespace MuseumApp.Controllers
             return Ok(create);
         }
 
-        [Route("{id}")]
+        [Route("put/{id}")]
         [HttpPut]
         public async Task<ActionResult> PutMuseum(int id, [FromBody] UpdateMuseumModel updateMuseum)
         {

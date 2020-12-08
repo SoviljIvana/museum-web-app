@@ -29,7 +29,7 @@ namespace MuseumApp.Domain.Services
             {
                 ExhibitId = exhibitModel.ExhibitId,
                 ExhibitionId = exhibitModel.ExhibitionId,
-                Name = exhibitModel.Name,
+                ExhibitName = exhibitModel.Name,
                 Year = exhibitModel.Year,
                 PicturePath = exhibitModel.PicturePath,
                 AuditoriumId = exhibitModel.AuditoriumId,
@@ -95,7 +95,7 @@ namespace MuseumApp.Domain.Services
                 {
                     ExhibitId = data.ExhibitId,
                     ExhibitionId = data.ExhibitionId,
-                    Name = data.Name,
+                    Name = data.ExhibitName,
                     Year = data.Year,
                     PicturePath = data.PicturePath,
                     AuditoriumId = data.AuditoriumId,
@@ -141,7 +141,7 @@ namespace MuseumApp.Domain.Services
                     Exhibit = new ExhibitDomainModel
                     {
                         ExhibitionId = existing.ExhibitionId,
-                        Name = existing.Name,
+                        Name = existing.ExhibitName,
                         Year = existing.Year,
                         ExhibitId = existing.ExhibitId,
                         PicturePath = existing.PicturePath,
@@ -167,7 +167,7 @@ namespace MuseumApp.Domain.Services
                 exhibitDomainModel = new ExhibitDomainModel
                 {
                     ExhibitionId = item.ExhibitionId,
-                    Name = item.Name,
+                    Name = item.ExhibitName,
                     Year = item.Year,
                     ExhibitId = item.ExhibitId,
                     PicturePath = item.PicturePath,
@@ -201,7 +201,7 @@ namespace MuseumApp.Domain.Services
                 exhibitDomainModel = new ExhibitDomainModel
                 {
                     ExhibitionId = item.ExhibitionId,
-                    Name = item.Name,
+                    Name = item.ExhibitName,
                     Year = item.Year,
                     ExhibitId = item.ExhibitId,
                     PicturePath = item.PicturePath,
@@ -223,7 +223,7 @@ namespace MuseumApp.Domain.Services
             result = new ExhibitDomainModel
             {
                 ExhibitId = data.ExhibitId,
-                Name = data.Name,
+                Name = data.ExhibitName,
                 Year = data.Year,
                 PicturePath = data.PicturePath,
                 AuditoriumId = data.AuditoriumId,
@@ -241,7 +241,7 @@ namespace MuseumApp.Domain.Services
                 ExhibitId = updateExhibit.ExhibitId,
                 AuditoriumId = updateExhibit.AuditoriumId,
                 ExhibitionId = updateExhibit.ExhibitionId,
-                Name = updateExhibit.Name,
+                ExhibitName = updateExhibit.Name,
                 Year = updateExhibit.Year,
                 PicturePath = updateExhibit.PicturePath
             };
@@ -272,7 +272,7 @@ namespace MuseumApp.Domain.Services
                     AuditoriumId = exhibitUpdate.AuditoriumId,
                     ExhibitionId = exhibitUpdate.ExhibitionId,
                     Year = exhibitUpdate.Year,
-                    Name = exhibitUpdate.Name,
+                    Name = exhibitUpdate.ExhibitName,
                     PicturePath = exhibitUpdate.PicturePath,
 
                 }

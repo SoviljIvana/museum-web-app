@@ -309,7 +309,7 @@ namespace MuseumApp.Domain.Services
                 {
                     exhibitsList.Add(new ExhibitDomainModel
                     {
-                        Name = exhibit.Name,
+                        Name = exhibit.ExhibitName,
                         PicturePath = exhibit.PicturePath,
                         Year = exhibit.Year,
                         AuditoriumId = exhibit.AuditoriumId,

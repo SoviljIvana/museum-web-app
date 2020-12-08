@@ -30,8 +30,9 @@ class ShowAllExhibitionsForUser extends Component{
                 'Authorization': 'Bearer ' + localStorage.getItem('jwt')
             }
         };
+        console.log(requestOptions);
             this.setState({isLoading: true});
-            fetch(`${serviceConfig.baseURL}/api/Exhibitions/get`, requestOptions)
+            fetch(`http://localhost:44363/api/Exhibitions/get`, requestOptions)
               .then(response => {
                 if (!response.ok) {
                   return Promise.reject(response);
@@ -99,6 +100,7 @@ class ShowAllExhibitionsForUser extends Component{
             return (
               
                         <CardColumns>
+                            <h1>exhibitions</h1>
                         {exhibitions}
                         </CardColumns>   
         
