@@ -8,7 +8,6 @@ using MuseumApp.Models;
 using MuseumApp.Domain.Common;
 using MuseumApp.Domain.Interfaces;
 using MuseumApp.Domain.Models;
-using MuseumApp.Models;
 
 namespace MuseumApp.Controllers
 {

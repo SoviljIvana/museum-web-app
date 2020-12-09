@@ -305,7 +305,6 @@ C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\Mu
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\MuseumApp.AssemblyInfoInputs.cache
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\MuseumApp.AssemblyInfo.cs
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\MuseumApp.csproj.CoreCompileInputs.cache
-C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\MuseumApp.MvcApplicationPartsAssemblyInfo.cs
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\MuseumApp.MvcApplicationPartsAssemblyInfo.cache
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\staticwebassets\MuseumApp.StaticWebAssets.Manifest.cache
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp\obj\Debug\netcoreapp3.1\staticwebassets\MuseumApp.StaticWebAssets.xml

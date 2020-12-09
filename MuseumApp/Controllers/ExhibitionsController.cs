@@ -8,7 +8,7 @@ using MuseumApp.Models;
 using MuseumApp.Domain.Common;
 using MuseumApp.Domain.Interfaces;
 using MuseumApp.Domain.Models;
-using MuseumApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MuseumApp.Controllers
 {
@@ -56,10 +56,29 @@ namespace MuseumApp.Controllers
         public async Task<ActionResult<IEnumerable<ExhibitionDomainModel>>> GetCurrentExhibitions()
         {
             IEnumerable<ExhibitionDomainModel> exhibitionDomainModel;
-            exhibitionDomainModel = await _exhibitionService.GetCurrentExhibitions();
+            try
+            {
+                exhibitionDomainModel = await _exhibitionService.GetCurrentExhibitions();
+            }
+            catch (DbUpdateException e)
+            {
+                ErrorResponseModel errorResponse = new ErrorResponseModel
+                {
+                    ErrorMessage = e.InnerException.Message ?? e.Message,
+                    StatusCode = System.Net.HttpStatusCode.BadRequest
+                };
+                return BadRequest(errorResponse);
+
+            }
+
             if (exhibitionDomainModel == null)
             {
-                return NotFound(Messages.EXHIBITIONS_GET_ALL_ERROR);
+                ErrorResponseModel errorResponse = new ErrorResponseModel()
+                {
+                    ErrorMessage = Messages.EXHIBITION_DOES_NOT_EXIST,
+                    StatusCode = System.Net.HttpStatusCode.NotFound
+                };
+                return NotFound(errorResponse);
             }
             return Ok(exhibitionDomainModel);
         }

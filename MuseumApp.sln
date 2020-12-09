@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Script", "Script", "{F6753D
 		Script.sql = Script.sql
 	EndProjectSection
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MuseumApp.Test", "MuseumApp.Test\MuseumApp.Test.csproj", "{3C683AEC-F311-4E7E-8BD2-1EA7F428DC41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{C3D97CAC-098C-4B03-8F05-67CD055DF547}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3D97CAC-098C-4B03-8F05-67CD055DF547}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3D97CAC-098C-4B03-8F05-67CD055DF547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C683AEC-F311-4E7E-8BD2-1EA7F428DC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C683AEC-F311-4E7E-8BD2-1EA7F428DC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C683AEC-F311-4E7E-8BD2-1EA7F428DC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C683AEC-F311-4E7E-8BD2-1EA7F428DC41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

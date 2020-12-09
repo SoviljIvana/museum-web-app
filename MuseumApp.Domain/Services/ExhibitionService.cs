@@ -277,7 +277,7 @@ namespace MuseumApp.Domain.Services
 
         public async Task<ExhibitionDomainModel> GetExhibitionByIdAsync(int id)
         {
-            var data = await _exhibitionRepository.GetByIdAsync(id);
+           var data = await _exhibitionRepository.GetByIdAsync(id);
 
             if (data == null) return null;
 
