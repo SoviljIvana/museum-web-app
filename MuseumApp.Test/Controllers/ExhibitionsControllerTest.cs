@@ -9,6 +9,7 @@ using MuseumApp.Domain.Models;
 using MuseumApp.Controllers;
 using Microsoft.EntityFrameworkCore;
 using MuseumApp.Models;
+using MuseumApp.Domain;
 
 namespace MuseumApp.Tests.Controllers
 {
@@ -18,6 +19,7 @@ namespace MuseumApp.Tests.Controllers
         private Mock<IExhibitionService> _mockExhibitionService;
         private ExhibitionDomainModel _exhibitionDomainModel;
         private List<ExhibitionDomainModel> _listOfExhibitionsDomainModel;
+        private UpdateExhibitionModel _updateExhibitionModel;
         
         [TestInitialize]
         public void TestInitialize()
@@ -106,5 +108,27 @@ namespace MuseumApp.Tests.Controllers
        
            
         }
+
+        [TestMethod]
+        public void ExhibitionController_UpdateExhibition_Accepted()
+        {
+            ////Arrange
+            //int expectedStatusCode = 200;
+            //UpdateExhibitionModel updateExhibitionModel = _updateExhibitionModel;
+            //CreateExhibitionResultModel createExhibitionResultModel = new CreateExhibitionResultModel()
+            //{
+            //    Exhibition = _exhibitionDomainModel,
+            //    IsSuccessfull = true,
+            //    ErrorMessage = null
+
+            //};
+          
+
+
+
+            //Act
+            //Assert
+        }
+
     }
 }

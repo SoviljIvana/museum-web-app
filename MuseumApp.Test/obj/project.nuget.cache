@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3U8tZCtqE3pI+2lNxoZZvevhiLI1PdzjQrUUimc0e6oV7HTLjHl+Hw0smLH/Kg/Gw4GlS4Ts4a4fITXBmHFdiw==",
+  "dgSpecHash": "+Hx79Z0FcoTPiUN0AYv3PSYRR2IvBAv/jSdO1j93r71s1cQyYfzMwiqFqMAEy08SP/ziDEPEiZZ4Vq/VgIyQlg==",
   "success": true,
   "projectFilePath": "C:\\MuseumAPP\\museum project- faks\\MuseumApp\\MuseumApp.Test\\MuseumApp.Test.csproj",
   "expectedPackageFiles": [
@@ -53,6 +53,7 @@
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\1.0.1\\microsoft.extensions.fileproviders.embedded.1.0.1.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.logging.debug\\5.0.0\\microsoft.extensions.logging.debug.5.0.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.objectpool\\1.0.1\\microsoft.extensions.objectpool.1.0.1.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.extensions.platformabstractions\\1.0.0\\microsoft.extensions.platformabstractions.1.0.0.nupkg.sha512",

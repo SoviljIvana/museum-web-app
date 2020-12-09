@@ -30,7 +30,7 @@ class ShowAllExhibitions extends Component{
             }
             };
             this.setState({isLoading: true});
-            fetch(`http://localhost:44363/api/Exhibitions/get`, requestOptions)
+            fetch(`${serviceConfig.baseURL}/api/Exhibitions/get`, requestOptions)
               .then(response => {
                 if (!response.ok) {
                   return Promise.reject(response);

@@ -15,7 +15,6 @@ class ShowAllExhibitionsForUser extends Component{
             isLoading: true,
         }
         this.exhibitionDetails = this.exhibitionDetails.bind(this);
-
         }
       
     componentDidMount(){
@@ -32,7 +31,7 @@ class ShowAllExhibitionsForUser extends Component{
         };
         console.log(requestOptions);
             this.setState({isLoading: true});
-            fetch(`http://localhost:44363/api/Exhibitions/get`, requestOptions)
+            fetch(`${serviceConfig.baseURL}/api/Exhibitions/get`, requestOptions)
               .then(response => {
                 if (!response.ok) {
                   return Promise.reject(response);
@@ -40,9 +39,7 @@ class ShowAllExhibitionsForUser extends Component{
               return response.json();
               })
               .then(data => {
-              
                 if (data) {
-                    
                   this.setState({ 
                     exhibitions: data,
                        isLoading: false });
@@ -54,9 +51,7 @@ class ShowAllExhibitionsForUser extends Component{
               });
         }   
 
-
         getAllExhibitions() {
-
             return this.state.exhibitions.map(exhibition => {
                 return <Card className = "center1" style={{ width: '20rem' }} className="text-center"  key={exhibition.id}>
                          <hr>
@@ -96,7 +91,7 @@ class ShowAllExhibitionsForUser extends Component{
         render(){
             const {isLoading} = this.state;
             const exhibitionDetails = this.getAllExhibitions();
-            const exhibitions = isLoading ? <Spinner></Spinner> :<Container className= "container-cards"> {exhibitionDetails} </Container>;
+            const exhibitions =<Container className= "container-cards"> {exhibitionDetails} </Container>;
             return (
               
                         <CardColumns>
