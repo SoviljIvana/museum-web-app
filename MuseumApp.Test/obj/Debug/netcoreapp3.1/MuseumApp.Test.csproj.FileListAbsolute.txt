@@ -233,3 +233,4 @@ C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp.Test\obj\Debug\netcoreapp3
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp.Test\obj\Debug\netcoreapp3.1\MuseumApp.Test.dll
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp.Test\obj\Debug\netcoreapp3.1\MuseumApp.Test.pdb
 C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp.Test\obj\Debug\netcoreapp3.1\MuseumApp.Test.genruntimeconfig.cache
+C:\MuseumAPP\museum project- faks\MuseumApp\MuseumApp.Test\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Debug.dll

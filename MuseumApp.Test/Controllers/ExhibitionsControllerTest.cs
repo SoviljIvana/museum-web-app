@@ -110,25 +110,101 @@ namespace MuseumApp.Tests.Controllers
         }
 
         [TestMethod]
-        public void ExhibitionController_UpdateExhibition_Accepted()
+        public void ExhibitionController_UpdateExhibition_ReturnNotFound()
         {
-            ////Arrange
-            //int expectedStatusCode = 200;
-            //UpdateExhibitionModel updateExhibitionModel = _updateExhibitionModel;
-            //CreateExhibitionResultModel createExhibitionResultModel = new CreateExhibitionResultModel()
-            //{
-            //    Exhibition = _exhibitionDomainModel,
-            //    IsSuccessfull = true,
-            //    ErrorMessage = null
+            //Arrange
+            int expectedStatusCode = 404;
+            ExhibitionDomainModel exhibitionDomainModel = null;
+            Task<ExhibitionDomainModel> responseTask = Task.FromResult(exhibitionDomainModel);
 
-            //};
-          
-
-
+            _mockExhibitionService = new Mock<IExhibitionService>();
+            _mockExhibitionService.Setup(x => x.GetExhibitionByIdAsync(It.IsAny<int>())).Returns(responseTask);
+            ExhibitionsController exhibitionsController = new ExhibitionsController(_mockExhibitionService.Object);
 
             //Act
+            var resultAction = exhibitionsController.PutExhibition(It.IsAny<int>(), It.IsAny<UpdateExhibitionModel>()).ConfigureAwait(false).GetAwaiter().GetResult();
+            var result = ((ObjectResult)resultAction).Value;
+            var resultErrorResponseModel = ((ErrorResponseModel)result).ErrorMessage;
+            var resultStatusCode = ((ErrorResponseModel)result).StatusCode;
+            var resultStatusCodeIntoInt = (int)resultStatusCode;
+
             //Assert
+            Assert.IsNotNull(resultAction);
+            Assert.AreEqual(expectedStatusCode, resultStatusCodeIntoInt);
+            Assert.IsInstanceOfType(resultAction, typeof(ObjectResult));
         }
+
+        [TestMethod]
+        public void ExhibitionController_UpdateExhibition_Accepted()
+        {
+            //Arrange
+            int expectedStatusCode = 202;
+            UpdateExhibitionModel updateExhibitionModel = _updateExhibitionModel;
+            ExhibitionDomainModel exhibitionDomainModel = _exhibitionDomainModel;
+            CreateExhibitionResultModel createExhibitionResultModel = new CreateExhibitionResultModel()
+            {
+                Exhibition = _exhibitionDomainModel,
+                IsSuccessfull = true,
+                ErrorMessage = null
+
+            };
+            Task<ExhibitionDomainModel> responseTask = Task.FromResult(_exhibitionDomainModel);
+            _mockExhibitionService = new Mock<IExhibitionService>();
+            _mockExhibitionService.Setup(x => x.GetExhibitionByIdAsync(It.IsAny<int>())).Returns(responseTask);
+            Task<CreateExhibitionResultModel> responseTaskUpdateExhibition = Task.FromResult(createExhibitionResultModel);
+            ExhibitionsController exhibitionsController = new ExhibitionsController(_mockExhibitionService.Object);
+
+            //Act
+            var resultAction = exhibitionsController.PutExhibition(It.IsAny<int>(), updateExhibitionModel).ConfigureAwait(false).GetAwaiter().GetResult();
+            var resultResponse = ((AcceptedResult)resultAction).Value;
+            var statusCode = ((AcceptedResult)resultAction).StatusCode;
+            var resultExhibitionDomainModel = (CreateExhibitionResultModel)resultResponse;
+
+            //Assert
+            Assert.IsNotNull(resultResponse);
+            Assert.IsNotInstanceOfType(resultAction, typeof(AcceptedResult));
+            Assert.IsTrue(resultExhibitionDomainModel.IsSuccessfull);
+            Assert.IsNull(resultExhibitionDomainModel.ErrorMessage);
+            Assert.AreEqual(expectedStatusCode, statusCode);
+
+        }
+
+
+
+        //[TestMethod]
+        //public void ExhibitionController_UpdateExhibition_Accepted()
+        //{
+        //    //Arrange
+        //    int expectedStatusCode = 202;
+        //    UpdateExhibitionModel updateExhibitionModel = _updateExhibitionModel;
+        //    ExhibitionDomainModel exhibitionDomainModel = _exhibitionDomainModel;
+        //    CreateExhibitionResultModel createExhibitionResultModel = new CreateExhibitionResultModel()
+        //    {
+        //        Exhibition = _exhibitionDomainModel,
+        //        IsSuccessfull = true,
+        //        ErrorMessage = null
+
+        //    };
+        //    Task<ExhibitionDomainModel> responseTask = Task.FromResult(_exhibitionDomainModel);
+        //    _mockExhibitionService = new Mock<IExhibitionService>();
+        //    _mockExhibitionService.Setup(x => x.GetExhibitionByIdAsync(It.IsAny<int>())).Returns(responseTask);
+        //    Task<CreateExhibitionResultModel> responseTaskUpdateExhibition = Task.FromResult(createExhibitionResultModel);
+        //    ExhibitionsController exhibitionsController = new ExhibitionsController(_mockExhibitionService.Object);
+
+        //    //Act
+        //    var resultAction = exhibitionsController.PutExhibition(It.IsAny<int>(), updateExhibitionModel).ConfigureAwait(false).GetAwaiter().GetResult();
+        //    var resultResponse = ((AcceptedResult)resultAction).Value;
+        //    var statusCode = ((AcceptedResult)resultAction).StatusCode;
+        //    var resultExhibitionDomainModel = (CreateExhibitionResultModel)resultResponse;
+
+        //    //Assert
+        //    Assert.IsNotNull(resultResponse);
+        //    Assert.IsNotInstanceOfType(resultAction, typeof(AcceptedResult));
+        //    Assert.IsTrue(resultExhibitionDomainModel.IsSuccessfull);
+        //    Assert.IsNull(resultExhibitionDomainModel.ErrorMessage);
+        //    Assert.AreEqual(expectedStatusCode, statusCode);
+
+        //}
 
     }
 }
