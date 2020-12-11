@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
 namespace MuseumApp.Domain.Common
 {
@@ -23,16 +21,6 @@ namespace MuseumApp.Domain.Common
         public const string AUDITORIUM_WITH_THIS_ID_ALREADY_EXISTS = "Auditorium with this id already exists";
         public const string AUDITORIUM_UPDATE_ERROR = "Auditorium update error";
 
-        //ticket
-        public const string TICKET_GET_ALL_ERROR = "Error occured while getting all tickets, please try again.";
-        public const string TICKET_GET_ID_ERROR = "Error occured while getting ticket with id: ";
-        public const string TICKET_WITH_THIS_ID_ALREADY_EXISTS = "Ticket with this id already exists";
-
-        //user
-        public const string USERS_GET_ALL_ERROR = "Error occured while getting all users, please try again.";
-        public const string USERS_GET_ID_ERROR = "Error occured while getting user with id: ";
-        public const string USER_DOES_NOT_EXIST = "User with this id does not exist.";
-        public const string USER_UPDATE_ERROR = "User update error";
         //exhibition
         public const string EXHIBITIONS_GET_ALL_ERROR = "Error occured while getting all exhibitions, please try again.";
         public const string EXHIBITION_GET_ID_ERROR = "Error occured while getting exhibition with id: ";
@@ -48,17 +36,13 @@ namespace MuseumApp.Domain.Common
         public const string EXHIBIT_GET_ID_ERROR = "Error occured while getting exhibit with id: ";
         public const string EXHIBITS_EMPTY_LIST = "List of exhibits are empty and you can't delete.";
         public const string EXHIBIT_DOES_NOT_EXIST = "Does not exist exhibit with this id. ";
-
         public const string EXHIBIT_UPDATE_ERROR = "Exhibit update error";
-
         public const string AUDITORIUM_WITH_THIS_ID_DOES_NOT_EXIST = "Auditorium with this id does not exist";
         public const string EXHIBITION_WITH_THIS_ID_DOES_NOT_EXIST = "Exhibition with this id does not exist";
         public const string START_MUST_BE_IN_THE_FUTURE = "Start time of exhibition must be in the future and end time must be after start time";
         public const string EXHIBIT_WITH_THIS_ID_ALREADY_EXISTS = "Exhibit with this id already exists, please try something else..";
         public const string EXHIBITION_UPDATE_ERROR = "Exhibition update error";
         public const string AUDITORIUM_DOES_NOT_EXIST = "Does not exist auditorium with this id. ";
-
-
 
         //tag
         public const string TAG_GET_ID_ERROR = "Error occured while getting tag with id: ";

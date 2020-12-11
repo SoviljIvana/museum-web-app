@@ -62,6 +62,9 @@
   text-decoration: underline;
   font-weight: bold;
 }
+.content{
+  height: 400px;
+}
 
 .loader {
   margin: 100px auto;

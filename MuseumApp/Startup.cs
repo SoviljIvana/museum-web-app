@@ -47,16 +47,14 @@ namespace MuseumApp
             services.AddTransient<IExhibitionsRepository, ExhibitionsRepository>();
             services.AddTransient<IExhibitsRepository, ExhibitsRepository>();
             services.AddTransient<IMuseumsRepository, MuseumsRepository>();
-            services.AddTransient<IUsersRepository, UsersRepository>();
-            services.AddTransient<ITicketsRepository, TicketsRepository>();
+   
 
             // Business Logic
             services.AddTransient<IAuditoriumService, AuditoriumService>();
             services.AddTransient<IExhibitionService, ExhibitionService>();
             services.AddTransient<IExhibitService, ExhibitService>();
             services.AddTransient<IMuseumService, MuseumService>();
-            services.AddTransient<IUserService, UserService>();
-            services.AddTransient<ITicketService, TicketService>();
+   
 
             // Allow Cors for client app
             services.AddCors(options => {

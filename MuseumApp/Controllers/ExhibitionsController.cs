@@ -54,6 +54,7 @@ namespace MuseumApp.Controllers
         [Route("get/currentExhibitions")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ExhibitionDomainModel>>> GetCurrentExhibitions()
+       
         {
             IEnumerable<ExhibitionDomainModel> exhibitionDomainModel;
             try

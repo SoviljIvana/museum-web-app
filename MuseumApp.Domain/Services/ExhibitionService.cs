@@ -13,13 +13,11 @@ namespace MuseumApp.Domain.Services
     public class ExhibitionService : IExhibitionService
     {
         private readonly IExhibitionsRepository _exhibitionRepository;
-        private readonly ITicketsRepository _ticketsRepository;
         private readonly IAuditoriumsRepository _auditoriumRepository;
         private readonly IExhibitsRepository _exhibitsRepository;
-        public ExhibitionService(IExhibitionsRepository exhibitionRepository, ITicketsRepository ticketsRepository, IAuditoriumsRepository auditoriumsRepository, IExhibitsRepository exhibitsRepository)
+        public ExhibitionService(IExhibitionsRepository exhibitionRepository, IAuditoriumsRepository auditoriumsRepository, IExhibitsRepository exhibitsRepository)
         {
             _exhibitionRepository = exhibitionRepository;
-            _ticketsRepository = ticketsRepository;
             _auditoriumRepository = auditoriumsRepository;
             _exhibitsRepository = exhibitsRepository;
         }
@@ -109,22 +107,8 @@ namespace MuseumApp.Domain.Services
             }
             else
             {
-                var listOfTickets = await _ticketsRepository.GetAll();
-
-                foreach (var ticket in listOfTickets)
-                {
-                    if (ticket.ExhibitionId == id)
-                    {
-                        return new ExhibitionResultModel
-                        {
-                            ErrorMessage = Messages.A_TICKET_TO_THIS_EXHIBITION_WAS_PURCHASED,
-                            IsSuccessful = false,
-                            Exhibition = null
-
-                        };
-                    }
-                }
-
+                
+                   
                 var existing = await _exhibitionRepository.GetByIdAsync(id);
 
                 if (existing == null)
@@ -383,19 +367,6 @@ namespace MuseumApp.Domain.Services
 
         }
 
-        async Task<List<int[]>> testForDeletionAsync(int id)
-        {
-            List<int[]> result = new List<int[]>();
-            var tickets = await _ticketsRepository.GetAll();
 
-            foreach (var ticket in tickets)
-            {
-                if (ticket.ExhibitionId == id)
-                {
-                    return null;
-                }
-            }
-            return result;
-        }
     }
 }

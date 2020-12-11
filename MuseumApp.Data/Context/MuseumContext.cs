@@ -9,8 +9,6 @@ namespace MuseumApp.Data.Context
         public DbSet<ExhibitEntity> Exhibits { get; set; }
         public DbSet<ExhibitionEntity> Exhibitions { get; set; }
         public DbSet<MuseumEntity> Museums { get; set; }
-        public DbSet<TicketEntity> Tickets { get; set; }
-        public DbSet<UserEntity> Users { get; set; }
 
         public MuseumContext(DbContextOptions options)
            : base(options)
@@ -21,44 +19,7 @@ namespace MuseumApp.Data.Context
         {
             base.OnModelCreating(modelBuilder);
 
-            /// <summary>
-            /// Ticket -> User relation
-            /// </summary>
-            /// <returns></returns>
-            modelBuilder.Entity<TicketEntity>()
-                .HasOne(x => x.User)
-                .WithMany(x => x.Tickets)
-                .HasForeignKey(x => x.UserId)
-                .IsRequired();
-
-            /// <summary>
-            /// User -> Ticket relation
-            /// </summary>
-            /// <returns></returns>
-            modelBuilder.Entity<UserEntity>()
-                .HasMany(x => x.Tickets)
-                .WithOne(x => x.User)
-                .IsRequired();
-
-            /// <summary>
-            /// Ticket -> Exhibition relation
-            /// </summary>
-            /// <returns></returns>
-            modelBuilder.Entity<TicketEntity>()
-                .HasOne(x => x.Exhibition)
-                .WithMany(x => x.Tickets)
-                .HasForeignKey(x => x.ExhibitionId)
-                .IsRequired();
-
-            /// <summary>
-            /// Exhibition -> Ticket relation
-            /// </summary>
-            /// <returns></returns>
-            modelBuilder.Entity<ExhibitionEntity>()
-                .HasMany(x => x.Tickets)
-                .WithOne(x => x.Exhibition)
-                .IsRequired();
-
+          
             /// <summary>
             /// Exhibit -> Exhibition relation
             /// </summary>
