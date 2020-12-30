@@ -20,6 +20,7 @@ function App() {
   return (
     <React.Fragment>
       <Header/>
+    
       <div className="set-overflow-y">
       <Switch>
         <Redirect exact from="/" to="home" />
@@ -30,11 +31,10 @@ function App() {
         <Redirect exact from="/" to="exhibits" />
         <Route path="/exhibits" component={AllExhibits} />
         <Route path="/auditoriums" component={AllAuditoriums} />
-
       </Switch>
-      <Footer/>
       <NotificationContainer />
       </div>
+      <Footer/>
     </React.Fragment>
   );
 }

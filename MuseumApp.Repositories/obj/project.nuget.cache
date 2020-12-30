@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WRdsxLlFEF2EaU7fSl8iBkG2aeiHZQkKkA+KrybWgNL1IOGo7WT8KI1Hatlnd/N0cCXq7RUV5XIB8tAFWy1lZw==",
+  "dgSpecHash": "RbkUl2V9rEpMLW2GrUiXXHE2wLEfip2AsNzbt1cqmCzT0hDltlsc9t+SFhpFnQm3Fkum8XdnXbU4YCHaKAqXmw==",
   "success": true,
   "projectFilePath": "C:\\MuseumAPP\\museum project- faks\\MuseumApp\\MuseumApp.Repositories\\MuseumApp.Repositories.csproj",
   "expectedPackageFiles": [
@@ -98,8 +98,7 @@
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

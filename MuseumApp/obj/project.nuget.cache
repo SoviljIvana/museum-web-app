@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OO7qktMUM/GfguPMyQZrx3fgubnRBG8OYvQ3o+a7JLkblrkIk4fHuhDWGdFCr5F/zUlOGYLR/Ap0bsoXKrRcDQ==",
+  "dgSpecHash": "qXQsF1ai7lNYCXDa2y5kJ9av9zPiKgdEyputae+VExOTUCzjHB+buuG/PoCr7lFqelQErcvHfukOQaFtMWP0Nw==",
   "success": true,
   "projectFilePath": "C:\\MuseumAPP\\museum project- faks\\MuseumApp\\MuseumApp\\MuseumApp.csproj",
   "expectedPackageFiles": [
@@ -204,9 +204,7 @@
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
     "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xpath\\4.0.1\\system.xml.xpath.4.0.1.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\ThinkPad\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+    "C:\\Users\\ThinkPad\\.nuget\\packages\\system.xml.xpath.xdocument\\4.0.1\\system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
   ],
   "logs": []
 }
