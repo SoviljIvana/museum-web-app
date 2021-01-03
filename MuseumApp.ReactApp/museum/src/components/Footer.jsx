@@ -15,6 +15,7 @@ class Footer extends Component{
     render(){
         return (
             <div className = "footer">
+                <div className = "footer-content">
                 <ul>
                     <li>Museum of Natural History</li>
                     <li>New York</li>
@@ -34,7 +35,7 @@ class Footer extends Component{
                <a> <img src={facebook} /></a>
                <a> <img src={instagram} /></a>
                     </ul>
-            
+            </div>
           </div>
         );
     }

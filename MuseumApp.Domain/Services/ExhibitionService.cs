@@ -248,6 +248,7 @@ namespace MuseumApp.Domain.Services
                     AuditoriumId = item.AuditoriumId,
                     TypeOfExhibition = item.TypeOfExhibition,
                     StartTime = item.StartTime,
+                    About = item.About,
                     EndTime = item.EndTime,
                     Picture = item.Picture
                 };

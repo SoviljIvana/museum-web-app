@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { NotificationManager } from 'react-notifications';
 import { serviceConfig } from '../../appSettings';
-import { Container, Card, CardColumns, Button,ResponsiveEmbed} from 'react-bootstrap';
+import { Container, Card, CardColumns, Button,ResponsiveEmbed, CardDeck} from 'react-bootstrap';
+import '../../App.css'
 
 class AllExhibitions extends Component {
     constructor(props) {
@@ -45,46 +46,27 @@ class AllExhibitions extends Component {
 
     getAllExhibitions() {
       return this.state.exhibitions.map(exhibition => {
-          return <Card className = "center1" style={{ width: '20rem' }} className="text-center"  key={exhibition.id}>
-                   <hr>
-                  </hr>
-                  <h1>Exhibitions</h1>
-          <Container>
-              <div className="inner">
-              <ResponsiveEmbed aspectRatio="4by3">
-            <Card.Img variant="top" src= {exhibition.picture} /> 
-            </ResponsiveEmbed>
-           </div>
-          </Container>   
-          <Container >
-              <Button>
-              <Card.Header  onClick={() => this.exhibitionDetails(exhibition.exhibitionId)}><h4 >{exhibition.exhibitionName}</h4></Card.Header>
-              </Button>
-          </Container>
-              <Card.Body>
-          <Container>
-              <Card.Text> {exhibition.about}</Card.Text>
-          </Container>
-          </Card.Body>
-          <Container>
-          Otvaranje:  <Card.Footer className="text-muted">
-          
-          </Card.Footer>
-            Zatvaranje: <Card.Footer className="text-muted">   </Card.Footer></Container>
-            <hr>
-                  </hr>
-      </Card>
-      })
-  }
+          return <Card variant="top"  key={exhibition.id}>
+                   
+                   <Card.Body>
+                   <Card.Title  onClick={() => this.exhibitionDetails(exhibition.exhibitionId)}><h4 >{exhibition.exhibitionName}</h4></Card.Title>
+                  
+                   <Card.Img variant="top"  src= {exhibition.picture} />
+                   <Card.Text>{exhibition.about} </Card.Text>
+                 
+                      <Card.Footer className="text-muted">Start: {exhibition.startTime} </Card.Footer>
+              
+                      <Card.Footer className="text-muted"> End: {exhibition.endTime}  </Card.Footer>
+                      </Card.Body>
+                      </Card>
+                       })
+                      }
  
     render(){
       const exhibitionDetails = this.getAllExhibitions();
-      const exhibitions =<Container className= "container-cards"> {exhibitionDetails} </Container>;
+      const exhibitions = <Container className= "container-cards"> {exhibitionDetails} </Container>;
       return (
-        
-                  <CardColumns>
-                  {exhibitions}
-                  </CardColumns>   
+        <CardDeck>{exhibitions}</CardDeck>
   
       );
   }
