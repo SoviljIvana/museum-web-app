@@ -5,8 +5,6 @@
 MuseumApp visitors will have the opportunity to see all exhibitions, current and coming soon.
 It is necessary to have your account for ticket reservation.
 
-* The idea of the site is that users can follow events in museums located in several cities in Serbia.
-
 ## Tools
 
 ##### Backend
