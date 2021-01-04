@@ -13,8 +13,10 @@ import CurrentExhibitions from './components/user/CurrentExhibitions';
 import AllExhibits from './components/user/AllExhibits';
 import AllAuditoriums from './components/user/AllAuditoriums';
 import About from './components/user/About';
-import Home from './components/Home'
-
+import Home from './components/Home';
+import AddExhibition from './components/user/AddExhibition';
+import EditExhibition from './components/user/EditExhibition';
+import ExhibitionDetailss from './components/user/ExhibitionDetails';
 // higher order component
 
 function App() {
@@ -33,6 +35,9 @@ function App() {
         <Route path="/exhibits" component={AllExhibits} />
         <Route path="/auditoriums" component={AllAuditoriums} />
         <Route path="/about" component={About} />
+        <Route path="/add-exhibition" component={AddExhibition} />
+        <Route path="/editExhibition/:id" component={EditExhibition} />
+        <Route path="/exhibitionDetails/:id" component={ExhibitionDetailss} />
       </Switch>
       <NotificationContainer />
       </div>

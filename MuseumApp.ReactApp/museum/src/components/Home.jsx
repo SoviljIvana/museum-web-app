@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch,  } from 'react-router-dom';
-import { DropdownItem, DropdownButton , Carousel} from 'react-bootstrap';
-import AllExhibitions from './user/AllExhibitions';
-import AllExhibits from './user/AllExhibits';
-import AllAuditoriums from './user/AllAuditoriums';
-import CurrentExhibitions from './user/CurrentExhibitions';
+
 import '../App.css';
 import image1 from './resources/p02hhfzm.jpg';
 import image2 from './resources/shutterstock_438357028_lz7xlx.jpg'

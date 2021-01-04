@@ -429,3 +429,45 @@ header{
   padding: 20px 200px 30px 190px;
 
 }
+
+.after-add-exhibition{
+  padding-top: 450px;
+}
+.btn-primary{
+  background-color: brown !important;
+  border-color: brown !important;
+}
+
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video{
+  position: static !important;
+}
+.embed-responsive-4by3::before{
+  padding-top: 0px !important;
+}
+
+.jumbotron{
+  background-color: brown !important;
+}
+.btn-link{
+  color: black !important;
+}
+
+h3{
+  padding-bottom: 30px;
+}
+
+h6{
+  color: black;
+}
+
+.card-body{
+  color: white;
+}
+
+.btn-dark{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.edit-exhibition-padding{
+  padding-top: 400px;
+}
