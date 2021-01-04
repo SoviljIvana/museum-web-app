@@ -26,6 +26,7 @@ class Header extends Component {
              <NavDropdown title="Exhibitions" id="basic-nav-dropdown"> 
               <NavDropdown.Item href="/exhibitions">All exhibitions</NavDropdown.Item>
               <NavDropdown.Item href="/current-exhibitions">Current exhibitions</NavDropdown.Item>
+              <NavDropdown.Item href="/add-exhibition">Add exhibition</NavDropdown.Item>
              </NavDropdown>
              </li>
              <li><Nav.Link href="/about">About</Nav.Link></li>

@@ -19,7 +19,6 @@ namespace MuseumApp.Data.Context
         {
             base.OnModelCreating(modelBuilder);
 
-          
             /// <summary>
             /// Exhibit -> Exhibition relation
             /// </summary>

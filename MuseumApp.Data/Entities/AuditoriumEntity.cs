@@ -18,4 +18,6 @@ namespace MuseumApp.Data.Entities
         public virtual ICollection<ExhibitionEntity> Exhibitions { get; set; }
 
     }
+
+  
 }
