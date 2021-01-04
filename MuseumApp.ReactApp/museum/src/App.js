@@ -12,6 +12,7 @@ import AllExhibitions from './components/user/AllExhibitions';
 import CurrentExhibitions from './components/user/CurrentExhibitions';
 import AllExhibits from './components/user/AllExhibits';
 import AllAuditoriums from './components/user/AllAuditoriums';
+import About from './components/user/About';
 import Home from './components/Home'
 
 // higher order component
@@ -31,6 +32,7 @@ function App() {
         <Redirect exact from="/" to="exhibits" />
         <Route path="/exhibits" component={AllExhibits} />
         <Route path="/auditoriums" component={AllAuditoriums} />
+        <Route path="/about" component={About} />
       </Switch>
       <NotificationContainer />
       </div>

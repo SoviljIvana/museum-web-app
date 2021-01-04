@@ -379,3 +379,53 @@ padding-bottom: 0px;
 .container{
   padding-bottom: 20px;
 }
+
+header{
+
+  text-align:  center !important;
+  color: black;
+  font-size: 44px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+  font-weight: 800;
+
+}
+
+.heading--text{
+  text-align: left;
+  color: black;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+
+}
+.heading--about{
+  text-align:  left;
+  color: black;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+
+}
+
+.about-text{
+  text-align:  left;
+  color: black;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: justify;
+
+}
+
+.about-content{
+  padding: 20px 200px 30px 190px;
+
+}

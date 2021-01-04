@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NotificationManager } from 'react-notifications';
 import { serviceConfig } from '../../appSettings';
-import { Container, Card, CardColumns, Button,ResponsiveEmbed} from 'react-bootstrap';
+import { Container, Card, CardColumns, Button,ResponsiveEmbed, CardDeck} from 'react-bootstrap';
 
 class AllAuditoriums extends Component {
     constructor(props) {
@@ -45,31 +45,25 @@ class AllAuditoriums extends Component {
 
     getAllExhibitions() {
       return this.state.auditoriums.map(auditorium => {
-          return <Card className = "center1" style={{ width: '20rem' }} className="text-center"  key={auditorium.id}>
-                   <hr>
-                  </hr>
-      
-        
+          return <Card  variant= "top" key={auditorium.id}>
               <Card.Body>
-          <Container>
-              <Card.Text> {auditorium.auditoriumId}</Card.Text>
-          </Container>
-          </Card.Body>
-     
-            <hr>
-                  </hr>
-      </Card>
-      })
-  }
+                 <Container>
+                    <Card.Text>Auditorium name: {auditorium.nameOfAuditorium}</Card.Text>
+                    <Card.Text>Number of seats: {auditorium.numberOfSeats}</Card.Text>
+                    </Container>
+                    </Card.Body>
+                     </Card>
+                      })
+                    }
  
     render(){
       const exhibitionDetails = this.getAllExhibitions();
       const exhibitions =<Container className= "container-cards"> {exhibitionDetails} </Container>;
       return (
         
-                  <CardColumns>
+                  <CardDeck>
                   {exhibitions}
-                  </CardColumns>   
+                  </CardDeck>   
   
       );
   }

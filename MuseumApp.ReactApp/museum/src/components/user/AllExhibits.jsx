@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NotificationManager } from 'react-notifications';
 import { serviceConfig } from '../../appSettings';
-import { Container, Card, CardColumns} from 'react-bootstrap';
+import { Container, Card, CardColumns, CardDeck} from 'react-bootstrap';
 
 class AllExhibits extends Component {
     constructor(props) {
@@ -45,39 +45,22 @@ class AllExhibits extends Component {
 
     getAllExhibits() {
       return this.state.exhibits.map(exhibit => {
-          return <Card className = "center1" style={{ width: '20rem' }} className="text-center"  key={exhibit.exhibitId}>
-                  
-                                <hr>
-                  </hr>
-      
-     
-              <Card.Body>
+          return <Card variant= "top" key={exhibit.exhibitId}>
+          <Card.Body>
           <Container>
-              <Card.Text>          {exhibit.name}
-</Card.Text>
-<Card.Text>          {exhibit.exhibitId}
-</Card.Text>
+          <Card.Text>Name of exhibit: {exhibit.name} </Card.Text>
+          <Card.Text>Year: {exhibit.year}</Card.Text>
+          <Card.Text>Picture path: {exhibit.picturePath} </Card.Text>
           </Container>
           </Card.Body>
-         
-            <hr>
-                  </hr>
-         
-         
-      </Card>
+         </Card>
       })
   }
  
     render(){
       const exhibitDetails = this.getAllExhibits();
       const exhibits =<Container className= "container-cards"> {exhibitDetails} </Container>;
-      return (
-        
-                  <CardColumns>
-                  {exhibits}
-                  </CardColumns>   
-  
-      );
+      return (<CardDeck>{exhibits}</CardDeck>);
   }
 }
 
